@@ -1,0 +1,72 @@
+@import 'my-react-component/src/styles/typeface.module.scss';
+@import 'my-react-component/src/styles/colors.module.scss';
+@import '../../../styles/common.scss';
+// HeaderItemList.tsx
+.header-item {
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+  & > .title {
+    @include typeface('Paragraph_1_b');
+  }
+  .mobile & {
+    min-width: 130px;
+  }
+}
+
+.search-item {
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  border: 0.5px solid color('grey_bbb');
+  overflow: hidden;
+  & > img {
+    width: 94px;
+    height: 140px;
+  }
+}
+
+// ColumnExplain.tsx
+.column-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  & > .break-words {
+    display: inline-block;
+    @include typeface('Paragraph_3_b');
+    color: color('grey_999');
+    // white-space: nowrap;
+    word-break: break-all;
+    // overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.list-container-right-fade {
+  padding: 20px;
+  @include rightFade();
+}
+// CastItem.tsx
+.cast-item-container {
+  .cast-info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    & > span:nth-child(1) {
+      @include typeface('Paragraph_2b');
+    }
+    & > span:nth-child(2) {
+      @include typeface('Paragraph_3');
+    }
+  }
+  background-color: color('white');
+  border-radius: 8px;
+  border: 0.5px solid color('grey_ccc');
+  > img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+}

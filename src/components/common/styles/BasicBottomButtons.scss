@@ -1,0 +1,10 @@
+.button-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  box-sizing: border-box;
+  & > div {
+    width: auto;
+    flex: 1;
+  }
+}
